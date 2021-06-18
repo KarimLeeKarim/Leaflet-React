@@ -7,12 +7,12 @@ const MapProvider = ({ children }) => {
     const [mapState, setMapState] = useState();
 
     useEffect(() => {
-        let mapField = L.map('mapid', {
+        const mapField = L.map('mapid', {
             center: [40.423, 49.840],
             zoom: 16,
         });
         setMapState(mapField);
-    },[]);
+    }, []);
 
     return (
         <MapContext.Provider value={mapState}>
@@ -20,5 +20,4 @@ const MapProvider = ({ children }) => {
         </MapContext.Provider>
     );
 }
-
 export default MapProvider;

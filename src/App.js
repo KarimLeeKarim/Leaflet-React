@@ -1,16 +1,17 @@
 import './App.css';
 import 'leaflet/dist/images/marker-icon.png';
-import Map from './Components/Map';
+import MapProvider from './MapContext';
+import MapLogic from './Components/MapLogic';
 import MapField from './Components/MapField';
 
 function App() {
-
     return (
         <div className="App">
             <MapField mapID="mapid" />
-            <Map/>
+            <MapProvider>
+                <MapLogic />
+            </MapProvider>
         </div>
     );
 }
-
 export default App;

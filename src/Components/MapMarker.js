@@ -1,12 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react';
 import L from 'leaflet';
 import icons from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
-import { MapContext } from "../MapContext";
 
-const MapMarker = () => {
-    let value = useContext(MapContext);
-
+const MapMarker = ({ value }) => {
     let myIcon = L.icon({
         iconUrl: icons,
         shadowUrl: iconShadow,
@@ -18,15 +15,13 @@ const MapMarker = () => {
         shadowAnchor: [4, 62],
         popupAnchor: [5, -34],
     });
-    if (value !== undefined) {
-        L.marker([40.4240, 49.8386], { icon: myIcon }).addTo(value)
-            .bindPopup('<b>Hello</b>, <br>hope all is right?');
-    }
+
+    value !== undefined && L.marker([40.4240, 49.8386], { icon: myIcon }).addTo(value)
+        .bindPopup('<b>Hello</b>, <br>hope all is right?');
 
     return (
         <>
         </>
     )
 }
-
 export default MapMarker;
