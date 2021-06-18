@@ -1,8 +1,8 @@
 import './App.css';
 import 'leaflet/dist/images/marker-icon.png';
 import MapProvider from './MapContext';
-import MapLogic from './Components/MapLogic';
-import MapField from './Components/MapField';
+import MapLogic from './Components/Map/MapLogic';
+import MapField from './Components/Map/MapField';
 
 function App() {
     return (

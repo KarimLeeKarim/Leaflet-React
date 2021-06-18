@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import 'leaflet/dist/leaflet.css';
 import MapLayer from './MapLayer';
 import MapMarker from './MapMarker';
-import { MapContext } from "../MapContext";
+import { MapContext } from "../../MapContext";
 
 const Map = () => {
     let value = useContext(MapContext);
