@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-export const MapContext = createContext();
+export const MapContext = createContext(null);
 
 const MapProvider = ({ children }) => {
     const [mapState, setMapState] = useState();
