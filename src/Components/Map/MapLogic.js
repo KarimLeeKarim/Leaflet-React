@@ -8,11 +8,16 @@ const Map = () => {
     let value = useContext(MapContext);
     return (
         <>
-            <MapLayer value={value}/>
-            <MapMarker value={value}/>
+            {value !== undefined ?
+                <>
+                    <MapLayer value={value} />
+                    <MapMarker value={value} />
+                </>
+                : null
+            }
         </>
     )
 }
 export default Map;
-/*As per Dmitriy all related logic regarding popup, modals and etc. should 
+/*As per Dmitriy all related logic regarding popup, modals and etc. should
 be done in this place in MAPLOGIC */

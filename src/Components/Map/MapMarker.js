@@ -25,9 +25,9 @@ const MapMarker = ({ value }) => {
         return new L.Icon(options);
     };
 
-    value !== undefined && L.marker([40.4241, 49.8388], { icon: greenIcon }).addTo(value).bindPopup("Sweet Home");
-    value !== undefined && L.marker([40.4256, 49.8423], { icon: redIcon }).addTo(value).bindPopup("<b>Azadliq Metro</b><br/>The Freedom Subway");
-    value !== undefined && L.marker([40.4225, 49.8423], { icon: orangeIcon }).addTo(value).bindPopup("Baku Tennis Academy");
+    L.marker([40.4241, 49.8388], { icon: greenIcon }).addTo(value).bindPopup("Sweet Home");
+    L.marker([40.4256, 49.8423], { icon: redIcon }).addTo(value).bindPopup("<b>Azadliq Metro</b><br/>The Freedom Subway");
+    L.marker([40.4225, 49.8423], { icon: orangeIcon }).addTo(value).bindPopup("Baku Tennis Academy");
 
     return (
         <>
